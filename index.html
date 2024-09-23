@@ -27,8 +27,16 @@
     // 🧠 Examples of usage:
     // processSingleLearner({ name: "Elisabeth", lovesJS: 1 }) // should return { name: "Elisabeth", lovesJS: true }
     // processSingleLearner({ name: "Pete", age: 23, lovesJS: 0 }) // should return { name: "Pete", age: 23, lovesJS: false }
-    const processSingleLearner = () => {
-
+    const processSingleLearner = (learner) => {
+      learner.lovesJS
+      if ( learner.lovesJS == 0) {
+        learner.lovesJS = false
+      return learner
+     }
+     if (learner.lovesJS == 1) {
+        learner.lovesJS = true 
+        return learner
+      }
     }
 
     // 👉 CHALLENGE 2
@@ -41,9 +49,18 @@
     // ❗ Notes:
     // 🧠 There are many approaches to this problem: using a loop, using forEach, using map...
     // 🧠 Solve this challenge using a for/in loop or a for loop.
-    const processLearnersLoop = () => {
-
-    }
+    const processLearnersLoop = (learners) => {
+      for (let index in learners) { 
+        const learner = learners [index]
+        if (learner.loveJS === 0) {
+         } else if (learner.loveJS === 1) {
+          learner.loveJS = true 
+         }
+        }
+        return learners 
+      }
+    
+  
 
     // 👉 CHALLENGE 3
     // 🧠 The function processLearnerForEach takes an array of learner objects as its argument, and returns it after some modifications.
